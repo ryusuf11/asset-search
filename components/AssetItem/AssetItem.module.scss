@@ -1,0 +1,134 @@
+.assetItem {
+  display: block;
+  border-radius: 8px;
+  background-color: #FAFAFC;
+  position: relative;
+  height: 13.125rem;
+  cursor: pointer;
+
+  &-icon {
+    height: 140px;
+
+    .assetItem__picture {
+      &>img {
+        width: 72px;
+        height: 72px;
+      }
+    }
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+
+  &__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem .75rem;
+  }
+
+  &__picture {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    &>img {
+      pointer-events: none;
+      max-width: 100%;
+      max-height: 100%;
+      transition: all 0.3s ease;
+      vertical-align: middle;
+      border-style: none;
+    }
+    
+  }
+
+  &__video {
+    padding-top: 66.86047%;
+    position: relative;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+
+    video {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+
+    &_button {
+      background-color: #F5F6FA;
+      border-radius: 6px;
+      width: 36px;
+      height: 36px;
+      border: 1px solid #EBEDF5;
+      position: absolute;
+      display: flex;
+      align-items: center;
+    }
+
+    &_label {
+      left: 12px;
+      bottom: 0;
+      font-size: 12px;
+      line-height: 15px;
+      color: #737999;
+      position: absolute;
+      max-width: 127px;
+      display: -webkit-box;
+      line-clamp: 1;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__more {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_overlay {
+      background: rgba(0, 0, 0, 0.8);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &_label {
+      position: absolute;
+      color: #fff;
+      font-size: 18px;
+      line-height: 28px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

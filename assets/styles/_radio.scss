@@ -1,0 +1,36 @@
+.radio {
+  appearance: none;
+  -webkit-appearance: none;
+  
+  background-color: #fff;
+  border: 2px solid #adb5bd;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  position: relative;
+  margin-right: 8px;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+  &:checked {
+    background-color: transparent;
+    border-color: #3D92DE;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 6px;
+      background-color: #3D92DE;
+      border-radius: 50%;
+    }
+  }
+}
+
+.radio,
+.form-check-label {
+  vertical-align: middle;
+}

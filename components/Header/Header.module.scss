@@ -1,0 +1,67 @@
+.header {
+  &Section {
+    padding: 24px 40px;
+    background-color: #FAFAFC;
+  
+    &__title {
+      font-size: 35px;
+      line-height: 52px;
+      font-weight: 700;
+      color: #000;
+      margin: 0 0 4px 0;
+    }
+  
+    &__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 400;
+      color: #5A607D;
+      margin: 0;
+    }
+  }
+
+  &Nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background-color: #FAFAFC;
+    position: relative;
+    border: 1px solid #EBEDF5;
+
+    &__filter {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      border-bottom: 1px solid #EBEDF5;
+      border-right: 1px solid #EBEDF5;
+      width: 260px;
+      min-width: 260px;
+      padding: 12px 24px;
+      color: #2E334C;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      padding: 0 4px;
+
+      a {
+        color: #2F72BC;
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 10px 0;
+      }
+      
+      &-active {
+        color: #000 !important;
+        border-bottom: 2px solid #000;
+      }
+    }
+  }
+}

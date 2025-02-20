@@ -1,0 +1,17 @@
+.navbar {
+  background-color: white;
+  box-shadow: 0px 6px 16px 0px #00000014;
+  padding: 12px 24px;
+  color: #2E334D;
+  font-size: 16px;
+  line-height: 20px;
+
+  &__brand {
+    margin-right: 29px;
+  }
+
+  &__items {
+    font-weight: 600;
+    align-items: center;
+  }
+}
