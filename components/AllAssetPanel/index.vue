@@ -1,7 +1,7 @@
 <template>
-  <div class="d-flex flex-column w-100 items-container" style="padding-right: 40px;padding-bottom: 40px;">
-    <div :class="styles.assetPanel" v-for="asset in assetList" :key="`asset-panel-${asset.key}`">
-      <h4 :class="styles.assetPanel__title">
+  <div class="d-flex flex-column w-100 items-container" style="padding-bottom: 40px;">
+    <div :class="styles.assetPanel" v-for="(asset, idx) in assetList" :key="`asset-panel-${asset.key}`">
+      <h4 :class="styles.assetPanel__title" :style="idx === 0 && 'padding-top:0px;'">
         {{ route.params.search }} {{ asset.title }}
       </h4>
 

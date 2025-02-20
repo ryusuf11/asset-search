@@ -9,7 +9,10 @@
       <AssetSkeleton />
     </template>
     <template v-else>
-      <AllAssetPanel :items="unref(items)" />
+      <div class="d-flex flex-column" style="width: calc(100vw - 340px)">
+        <CategorySlider :keywords="unref(keywords) || []" />
+        <AllAssetPanel :items="unref(items)" />
+      </div>
     </template>
   </div>
 </template>
@@ -17,7 +20,7 @@
 <script setup lang="ts">
 import { reactive, computed, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { Navbar } from '#components';
+import { AllAssetPanel, AssetSkeleton, CategorySlider, Filter, Header, Navbar } from '#components';
 import { getSearch } from '~/modules/search/getSearch.action';
 
 const route = useRoute();

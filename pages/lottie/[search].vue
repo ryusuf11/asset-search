@@ -9,7 +9,10 @@
       <AssetSkeleton />
     </template>
     <template v-else>
-      <AssetContainer assetType="lottie" :fetchItem="fetchItem" />
+      <div class="d-flex flex-column" style="width: calc(100vw - 340px)">
+        <CategorySlider :keywords="unref(keywords) || []" />
+        <AssetContainer assetType="lottie" :fetchItem="fetchItem" />
+      </div>
     </template>
   </div>
 </template>
@@ -17,7 +20,7 @@
 <script setup lang="ts">
 import { reactive, computed, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { Navbar } from '#components';
+import { AssetContainer, AssetSkeleton, CategorySlider, Filter, Header, Navbar } from '#components';
 import { getKeyword } from '~/modules/search/getSearch.action';
 import type { SearchResponse } from '~/modules/search/search.type';
 

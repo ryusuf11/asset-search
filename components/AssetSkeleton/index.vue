@@ -1,6 +1,6 @@
 <template>
   <div :class="classItems">
-    <div v-for="i in 25" :key="i" :class="styles.assetSection__item" />
+    <div v-for="i in totalItems" :key="i" :class="styles.assetSection__item" />
   </div>
 </template>
 
@@ -13,6 +13,8 @@ const props = defineProps({
     default: 'asset'
   }
 })
+
+const totalItems = ref(props.variant === 'icon' ? 50 : 25)
 
 const classItems = computed(() => ({
   [styles.assetSection]: true,
