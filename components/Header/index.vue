@@ -78,7 +78,9 @@ onMounted(() => {
 
 watch(isSticky, (value) => {
   if (headerSection.value) {
-    headerSection.value.classList.toggle('headerNav--sticky', value)
+    setTimeout(() => {
+      headerSection.value?.classList.toggle('headerNav--sticky', value)
+    }, 200);
   }
 })
 </script>

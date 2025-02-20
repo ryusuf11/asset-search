@@ -6,7 +6,7 @@
     <Filter :keywords="unref(keywords) || []" />
 
     <template v-if="assetLoading">
-      <AssetSkeleton />
+      <AssetSkeleton variant="icon" />
     </template>
     <template v-else>
       <AssetContainer assetType="icon" :fetchItem="fetchItem" />

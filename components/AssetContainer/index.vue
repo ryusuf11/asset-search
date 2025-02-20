@@ -13,7 +13,11 @@
         </template>
 
         <template v-slot:placeholder="{ index, style }">
-          <div :class="`${assetItemStyle.assetItem} ${assetItemStyle.assetItem__skeleton}`" :style="style" />
+          <div :class="{
+            [assetItemStyle.assetItem]: true,
+            [assetItemStyle['assetItem-icon']]: assetType === 'icon',
+            [assetItemStyle.assetItem__skeleton]: true,
+          }" :style="style" />
         </template>
 
         <template #default="{ item, style }">

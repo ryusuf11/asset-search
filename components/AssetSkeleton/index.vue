@@ -1,6 +1,6 @@
 <template>
-  <div :class="styles.assetSection">
-    <div v-for="i in 25" :key="i" :class="classItems" />
+  <div :class="classItems">
+    <div v-for="i in 25" :key="i" :class="styles.assetSection__item" />
   </div>
 </template>
 
@@ -15,8 +15,8 @@ const props = defineProps({
 })
 
 const classItems = computed(() => ({
-  [styles.assetSection__item]: true,
-  [styles['assetSection__item--icon']]: props.variant === 'icon'
+  [styles.assetSection]: true,
+  [styles['assetSection--icon']]: props.variant === 'icon'
 }))
 
 </script>
