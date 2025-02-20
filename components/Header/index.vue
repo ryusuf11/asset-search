@@ -8,6 +8,7 @@
         {{ subtitle }}
       </p>
     </div>
+    <div class="position-absolute w-100" style="height:58px;"></div>
     <div ref="headerSection" :class="styles.headerNav" class="headerNav">
       <div :class="styles.headerNav__filter">
         <div class="d-flex gap-2 align-items-center flex-grow-1">

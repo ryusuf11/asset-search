@@ -13,7 +13,7 @@
         </template>
 
         <template v-slot:placeholder="{ index, style }">
-          <div :class="assetItemStyle.assetItem" :style="style" />
+          <div :class="`${assetItemStyle.assetItem} ${assetItemStyle.assetItem__skeleton}`" :style="style" />
         </template>
 
         <template #default="{ item, style }">
@@ -70,7 +70,7 @@ const props = defineProps({
 });
 
 const page = ref(1)
-const totalItem = ref(15)
+const totalItem = ref(50)
 
 const getItems = (items: Pick<SearchResponseData, keyof SearchResponseData> | undefined) => {
   const sourceItems = unref(items)
@@ -119,7 +119,7 @@ const getItem = (assetType: string, item: Daum) => {
 
 const pageProvider = computed(() => async (pageNum: number) => {
   if (props.isGuest && pageNum === 1) {
-    totalItem.value = 15
+    totalItem.value = 50
 
     return []
   }
