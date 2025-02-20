@@ -135,7 +135,6 @@ onMounted(() => {
 })
 
 const keywords = computed(() => searchData.value?.keywords || []);
-const assetLoading = computed(() => status.value === 'pending');
 
 const totalItems = computed(() => {
   return rawItem.value?.response?.aggregations?.assets?.['3ds_count'] || 0;
@@ -166,4 +165,6 @@ useHead({
     { property: 'og:description', content: description }
   ],
 });
+
+const assetLoading = computed(() => status.value === 'pending' || (isFetching.value && !rawItem.value?.response));
 </script>
