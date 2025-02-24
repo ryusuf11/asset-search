@@ -190,7 +190,7 @@
 
 <script setup lang="ts">
 const footerRef = useTemplateRef<HTMLElement | null>('footerRef');
-const isHeaderSticky = ref(true);
+const isHeaderSticky = ref(false);
 
 let observer: IntersectionObserver;
 
@@ -205,7 +205,7 @@ onMounted(() => {
     },
     {
       threshold: 0.8,
-      rootMargin: '0px 0px -40px 0px',
+      rootMargin: '0px 0px 0px 0px',
     }
   );
 
@@ -220,11 +220,11 @@ onBeforeUnmount(() => {
   }
 });
 
-watch(isHeaderSticky, (value) => {
-  setTimeout(() => {
-    document.querySelector('.headerNav')?.classList.toggle('headerNav--sticky', value);
-  }, 200);
-});
+// watch(isHeaderSticky, (value) => {
+//   setTimeout(() => {
+//     document.querySelector('.headerNav')?.classList.toggle('headerNav--sticky', value);
+//   }, 1000);
+// });
 </script>
 
 <style lang="scss" scoped>
