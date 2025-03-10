@@ -85,7 +85,7 @@ Both packages enable to embed Lottie animations into web applications, but they 
 ## @lottiefiles/lottie-player
 
 **[NPM Package](https://www.npmjs.com/package/@lottiefiles/lottie-player)**  
-**Sample URL:** [https://localhost:3000/lottie-player/people](https://localhost:3000/lottie-player/people)
+**Sample URL:** [https://iconscout-search-seven.vercel.app/lottie-player/people](https://localhost:3000/lottie-player/people)
 
 ### Keypoints
 
@@ -99,7 +99,7 @@ Both packages enable to embed Lottie animations into web applications, but they 
 ## @lottiefiles/dotlottie-vue
 
 **[NPM Package](https://www.npmjs.com/package/@lottiefiles/dotlottie-vue)**  
-**Sample URL:** [https://localhost:3000/lottie/people](https://localhost:3000/lottie/people)
+**Sample URL:** [https://iconscout-search-seven.vercel.app/lottie/people](https://localhost:3000/lottie/people)
 
 ### Keypoints
 
